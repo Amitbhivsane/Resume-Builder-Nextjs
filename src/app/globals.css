@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #09090b;
+  --foreground: #fafafa;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Inter', var(--font-geist-sans), sans-serif;
+}
+
+/* Custom styles and scrollbar overrides */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Print CSS Stylesheet */
+@media print {
+  body, html {
+    background: #ffffff !important;
+    color: #000000 !important;
+    width: 210mm;
+    height: 297mm;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide entire dashboard frame and controls */
+  .no-print,
+  nav,
+  button,
+  footer,
+  aside,
+  #dashboard-editor,
+  #ats-sidebar {
+    display: none !important;
+  }
+
+  /* Force print target to display cleanly in full-page */
+  #resume-a4-page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 210mm !important;
+    height: 297mm !important;
+    padding: 20mm !important;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: white !important;
+    color: black !important;
+    page-break-after: avoid;
+    page-break-before: avoid;
+  }
+}
+
+/* A4 scaling rules for screen preview */
+@media (max-width: 1024px) {
+  #resume-a4-page {
+    transform: scale(0.85);
+    transform-origin: top center;
+    margin-bottom: -50px;
+  }
+}
+
+@media (max-width: 768px) {
+  #resume-a4-page {
+    transform: scale(0.65);
+    transform-origin: top center;
+    margin-bottom: -120px;
+  }
+}
+
+@media (max-width: 480px) {
+  #resume-a4-page {
+    transform: scale(0.45);
+    transform-origin: top center;
+    margin-bottom: -220px;
+  }
+}
