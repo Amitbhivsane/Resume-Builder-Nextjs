@@ -2,9 +2,9 @@
 
 Aura Resume Builder is a modern SaaS-style resume creation platform designed to help job seekers build professional, ATS-friendly resumes in minutes.
 
-Built with Next.js 16, React, Tailwind CSS, and React PDF, the application provides real-time resume editing, live preview, ATS score analysis, and one-click PDF generation with clickable links.
+Built with Next.js 16, React, Tailwind CSS, React PDF, and Ant Design, the application provides real-time resume editing, live preview, ATS score analysis, and one-click PDF generation with clickable links.
 
-Developed by Amit Bhivsane for Digital Heroes.
+Developed by Amit Bhivsane.
 
 ## Features
 
@@ -36,25 +36,4 @@ Developed by Amit Bhivsane for Digital Heroes.
 ### Deployment
 - Vercel
 
-- ## Project Structure
 
-src/
-├── app/
-│   ├── page.js
-│   ├── layout.js
-│   └── globals.css
-│
-├── components/
-│   ├── ResumeForm.jsx
-│   ├── ResumePreview.jsx
-│   ├── ResumePDF.jsx
-│   ├── DownloadPDF.jsx
-│   ├── ATSScore.jsx
-│   ├── ExperienceSection.jsx
-│   ├── EducationSection.jsx
-│   ├── SkillsSection.jsx
-│   ├── ProjectsSection.jsx
-│   └── CertificationsSection.jsx
-│
-└── utils/
-    └── atsAnalyzer.js
